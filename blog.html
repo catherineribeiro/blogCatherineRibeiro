@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Catherine Ribeiro</title>
+  <link rel="stylesheet" href="assets/css/estilo.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+      <img src="assets/imagens/perfil.jpeg" alt="Foto de Catherine"  class="logoft">
+        <a class="logo" href="index.html"><span>Catherine Ribeiro</span></a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav>
+          <ul id="nav-menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="container">
+
+        <p class="section-label">// artigos</p>
+        <h1 class="section-title">Blog</h1>
+
+        <div class="blog-lista">
+
+          <!-- POST 1 -->
+          <article class="blog-post-card">
+            <p class="post-meta">10/03/2026 · Introdução à Informática</p>
+            <h2><a href="#">Minha primeira semana aprendendo HTML</a></h2>
+            <p>
+              Quando entrei no curso de TDS, ouvi muito sobre HTML mas nunca imaginei que aprender a "linguagem da web" 
+              fosse tão revelador. Na primeira semana, descobri que cada página que já acessei na internet é construída 
+              com tags — pequenos blocos de significado que o navegador interpreta e transforma em texto, imagens e botões.
+            </p>
+            <p>
+              O mais surpreendente foi entender a diferença entre HTML semântico e não semântico. Usar 
+              <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code> e <code>&lt;footer&gt;</code> não é apenas 
+              organização visual: é comunicação com o navegador, com leitores de tela e com ferramentas de busca. 
+              Aprendi que código bem escrito é código que se explica sozinho.
+            </p>
+            <p>
+              Se você também está começando, meu conselho é: não pule etapas. Entenda o porquê de cada tag antes 
+              de correr para o CSS. A base sólida faz toda a diferença.
+            </p>
+          </article>
+
+          <!-- POST 2 -->
+          <article class="blog-post-card">
+            <p class="post-meta">25/03/2026 · Ferramentas</p>
+            <h2><a href="#">Por que aprender Git é importante</a></h2>
+            <p>
+              No início do curso, o professor pediu para instalar o Git e fazer um commit. Eu não entendia nada — 
+              afinal, por que precisaria de um "controle de versão" se estava trabalhando sozinho?
+            </p>
+            <p>
+              Depois de algumas semanas, entendi. Git é como um diário do projeto: cada commit registra uma versão 
+              do código com uma mensagem explicando o que mudou. Se algo der errado, você volta para qualquer ponto 
+              anterior com um simples comando. Para trabalhar em equipe, então, é indispensável — permite que várias 
+              pessoas trabalhem no mesmo projeto sem sobrescrever o trabalho umas das outras.
+            </p>
+            <p>
+              Aprendi também a usar o GitHub para hospedar meu código na nuvem. Hoje, todo projeto que começo já 
+              nasce com um repositório. Essa mudança de hábito foi pequena, mas transformou minha organização 
+              como desenvolvedor em formação.
+            </p>
+          </article>
+
+          <!-- POST 3 -->
+          <article class="blog-post-card">
+            <p class="post-meta">15/04/2026 · Aprendizado</p>
+            <h2><a href="#">Dicas para quem está começando em programação</a></h2>
+            <p>
+              Depois de alguns meses no curso de TDS, acumulei alguns aprendizados que gostaria de ter recebido 
+              no primeiro dia. Compartilho aqui as cinco dicas que mais fizeram diferença na minha trajetória:
+            </p>
+            <p>
+              <strong>1. Código todo dia.</strong> Mesmo que seja pouco, a prática diária constrói fluência. 
+              Quinze minutos todos os dias valem mais do que três horas num único dia da semana.
+            </p>
+            <p>
+              <strong>2. Leia o erro com atenção.</strong> Mensagens de erro parecem assustadoras no começo, 
+              mas geralmente apontam exatamente onde está o problema. Aprenda a interpretá-las.
+            </p>
+            <p>
+              <strong>3. Não copie e cole sem entender.</strong> Copiar código que você não entende é 
+              acumular dívida técnica. Prefira escrever mais devagar e saber o que cada linha faz.
+            </p>
+            <p>
+              <strong>4. Peça ajuda.</strong> Travar num problema por horas sem pedir ajuda não é persistência, 
+              é perda de tempo. Pergunte ao professor, a colegas, pesquise em fóruns.
+            </p>
+            <p>
+              <strong>5. Construa projetos reais.</strong> Exercícios isolados ensinam, mas projetos completos 
+              desenvolvem. Mesmo que seja simples, termine o que você começa.
+            </p>
+          </article>
+
+        </div>
+        <!-- Adicione mais posts acima seguindo o mesmo modelo de article.blog-post-card -->
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p>© <span class="ano-atual"></span> Catherine Ribeiro — Projeto Integrador TDSV1</p>
+      </div>
+    </footer>
+
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

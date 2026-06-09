@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato — Catherine Ribeiro</title>
+  <link rel="stylesheet" href="assets/css/estilo.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+      <img src="assets/imagens/perfil.jpeg" alt="Foto de Catherine"  class="logoft">
+        <a class="logo" href="index.html"><span>Catherine Ribeiro</span></a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav>
+          <ul id="nav-menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="container">
+
+        <p class="section-label">// fale comigo</p>
+        <h1 class="section-title">Contato</h1>
+
+        <!-- GRID: FORMULÁRIO + INFO -->
+        <div class="contato-grid">
+
+          <!-- FORMULÁRIO -->
+          <div>
+            <form id="form-contato" novalidate>
+
+              <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" />
+                <p class="msg-erro" id="erro-nome"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@email.com" />
+                <p class="msg-erro" id="erro-email"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..."></textarea>
+                <p class="msg-erro" id="erro-mensagem"></p>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;">Enviar mensagem</button>
+
+              <div id="form-feedback" class="form-feedback"></div>
+
+            </form>
+          </div>
+
+          <!-- INFORMAÇÕES DE CONTATO -->
+          <div class="contato-info">
+            <h3>Onde me encontrar</h3>
+
+            <a class="contato-link" href="https://github.com/catherineribeiro" target="_blank" rel="noopener">
+              <span class="icone">&#128279;</span>
+              github.com/catherineribeiro
+            </a>
+
+            <a class="contato-link" href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noopener">
+              <span class="icone">&#128100;</span>
+              linkedin.com/in/seu-usuario
+            </a>
+
+            <a class="contato-link" href="https://mail.google.com/mail/">
+              <span class="icone">&#9993;</span>
+            catherineribeiro04@gmail.com
+            </a>
+
+             <a class="contato-link" href="https://www.instagram.com/catherineribeirooo">
+              <span class="icone">&#9993;</span>
+            instagram/catherineribeirooo
+            </a>
+          </div>
+
+        </div>
+
+        <!-- SEPARADOR -->
+        <hr style="border:none; border-top:1px solid var(--border); margin:64px 0;" />
+
+        <!-- ESPECIFICAÇÕES DE HARDWARE (Introdução à Informática) -->
+        <section>
+          <p class="section-label">// Introdução à Informática</p>
+          <h2 class="section-title">Especificações para Acesso ao Site</h2>
+          <p style="color:var(--text-secondary); margin-bottom:32px; font-size:0.95rem;">
+            Este site é uma aplicação web leve desenvolvida com HTML, CSS e JavaScript puro,
+            sem dependências externas pesadas. Abaixo estão as especificações mínimas e
+            recomendadas para acesso com desempenho adequado.
+          </p>
+
+          <div class="specs-grid">
+
+            <!-- MÍNIMO -->
+            <div class="spec-card">
+              <h4>⚙ Especificação Mínima</h4>
+              <div class="spec-item">
+                <strong>CPU:</strong> Processador dual-core 1.0 GHz
+              </div>
+              <div class="spec-item">
+                <strong>RAM:</strong> 1 GB
+              </div>
+              <div class="spec-item">
+                <strong>Armazenamento:</strong> Sem requisito (apenas acesso à internet)
+              </div>
+              <div class="spec-item">
+                <strong>Internet:</strong> Conexão de 1 Mbps
+              </div>
+              <div class="spec-item">
+                <strong>Navegador:</strong> Chrome 90+, Firefox 88+, Edge 90+ ou Safari 14+
+              </div>
+              <div class="spec-item">
+                <strong>Resolução:</strong> 360 × 640 px (smartphone básico)
+              </div>
+              <div class="spec-item">
+                <strong>JavaScript:</strong> Habilitado
+              </div>
+            </div>
+
+            <!-- RECOMENDADO -->
+            <div class="spec-card">
+              <h4>✦ Especificação Recomendada</h4>
+              <div class="spec-item">
+                <strong>CPU:</strong> Processador quad-core 2.0 GHz ou superior
+              </div>
+              <div class="spec-item">
+                <strong>RAM:</strong> 4 GB ou mais
+              </div>
+              <div class="spec-item">
+                <strong>Armazenamento:</strong> Sem requisito (apenas acesso à internet)
+              </div>
+              <div class="spec-item">
+                <strong>Internet:</strong> Conexão de 10 Mbps ou superior
+              </div>
+              <div class="spec-item">
+                <strong>Navegador:</strong> Google Chrome (versão mais recente)
+              </div>
+              <div class="spec-item">
+                <strong>Resolução:</strong> 1280 × 720 px ou superior
+              </div>
+              <div class="spec-item">
+                <strong>JavaScript:</strong> Habilitado
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p>© <span class="ano-atual"></span> Catherine Ribeiro — Projeto Integrador TDSV1</p>
+      </div>
+    </footer>
+
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
