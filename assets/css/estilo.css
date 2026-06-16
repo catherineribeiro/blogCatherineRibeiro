@@ -5,10 +5,10 @@
 
 :root {
   --bg-primary: #121212;      /* fundo principal */
-  --bg-secondary: #d8d7d6;    /* seções */
+  --bg-secondary: #dbd2c9;    /* seções */
   --bg-card: #242424;         /* cards */
-  --accent: #f08fc7;          /* dourado */
-  --accent-secondary: ; /* rosa claro */
+  --accent: #f08fc7;
+  --accent-secondary: #ed70ed; /* rosa claro */
   --text-primary: #f8f8f8;
   --text-secondary: #717070;
   --text-muted: #555;
@@ -64,7 +64,7 @@ ul {
    LAYOUT
    ============================================= */
 .container {
-  max-width: 860px;
+  max-width: 920px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -104,13 +104,13 @@ header .container {
   position: sticky;
   top: 0;
   z-index: 100;
-  margin-right: 110px;
+  margin-right: 180px;
 }
 
 .logoft{
     width: 50px;
     height: 50px;
-    border: 3px solid #746c6c;
+    border: 1px solid #494747;
     border-radius: 70%;
     overflow: auto;
     object-fit: cover;
@@ -232,7 +232,7 @@ nav a.ativo {
 }
 
 .btn-outline:hover {
-  background-color: var(--accent-dim);
+  background-color: #fd29e4;
   opacity: 1;
 }
 
@@ -381,6 +381,15 @@ nav a.ativo {
   padding-left: 28px;
 }
 
+.curriculo-img img{
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 3px solid var(--accent);
+  margin-left: 800px;
+}
+
 .timeline::before {
   content: '';
   position: absolute;
@@ -447,12 +456,17 @@ nav a.ativo {
   align-items: center;
   gap: 10px;
 }
+.habilidade-item:hover {
+  border-color: var(--accent);
+}
 
 .habilidade-item::before {
   content: '▸';
   color: var(--accent);
   font-size: 0.75rem;
 }
+
+
 
 /* =============================================
    BLOG

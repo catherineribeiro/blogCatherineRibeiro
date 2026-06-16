@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currículo — Catherine Ribeiro de Souza</title>
+  <link rel="stylesheet" href="assets/css/estilo.css" />
+  <style>
+    /* ── PERFIL / DADOS PESSOAIS ── */
+    .perfil-section {
+      display: flex;
+      gap: 48px;
+      align-items: flex-start;
+      margin-bottom: 56px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .perfil-foto-wrap {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .perfil-foto {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      display: block;
+    }
+
+    /* Placeholder exibido quando não há imagem */
+    .perfil-foto-placeholder {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 2px dashed var(--accent);
+      background: var(--bg-card);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: border-color var(--transition), background var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .perfil-foto-placeholder:hover {
+      border-color: var(--accent-secondary);
+      background: #2a2a2a;
+    }
+
+    .perfil-foto-placeholder span {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .perfil-foto-placeholder p {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      font-family: var(--font-display);
+      letter-spacing: 0.5px;
+      text-align: center;
+      padding: 0 12px;
+    }
+
+    #input-foto {
+      display: none;
+    }
+
+    .perfil-dados {
+      flex: 1;
+    }
+
+    .perfil-dados h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+
+    .perfil-cargo {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .perfil-bio {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      max-width: 520px;
+      line-height: 1.75;
+    }
+
+    .dados-lista {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 32px;
+    }
+
+    .dado-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .dado-label {
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .dado-valor {
+      font-size: 0.875rem;
+      color: var(--text-primary);
+    }
+
+    /* Responsivo */
+    @media (max-width: 700px) {
+      .perfil-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .perfil-dados {
+        width: 100%;
+      }
+
+      .perfil-dados h2 {
+        text-align: center;
+      }
+
+      .perfil-cargo {
+        text-align: center;
+      }
+
+      .dados-lista {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <img src="assets/imagens/perfil.jpeg" alt="Foto de Catherine" class="logoft">
+        <a class="logo" href="index.html"><span>Catherine Ribeiro</span></a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav>
+          <ul id="nav-menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="container">
+
+        <p class="section-label">// trajetória</p>
+        <h1 class="section-title">Currículo</h1>
+
+        <!-- ── PERFIL / DADOS PESSOAIS ── -->
+        <div class="perfil-section">
+
+          <!-- Foto -->
+          <div class="perfil-foto-wrap">
+            <div class="perfil-foto-placeholder" id="foto-placeholder" onclick="document.getElementById('input-foto').click()" title="Clique para adicionar foto">
+              <img id="preview-foto" src="assets/imagens/perfil.jpeg" alt="Foto de perfil" class="perfil-foto" style="display:block; position:absolute; inset:0; width:100%; height:100%; border-radius:50%; object-fit:cover;" onerror="this.style.display='none'; document.getElementById('placeholder-icon').style.display='flex';" />
+              <div id="placeholder-icon" style="display:none; flex-direction:column; align-items:center; gap:8px;">
+                <span>📷</span>
+                <p>Adicionar foto</p>
+              </div>
+            </div>
+            <input type="file" id="input-foto" accept="image/*" />
+          </div>
+
+          <!-- Dados -->
+          <div class="perfil-dados">
+            <h2>Catherine Ribeiro de Souza</h2>
+            <p class="perfil-cargo"> · Brasília, DF</p>
+
+            <p class="perfil-bio">
+              Estudante de Análise e Desenvolvimento de Sistemas com experiência em ambiente corporativo e interesse em desenvolvimento web. Comprometida com o aprendizado contínuo e a entrega de soluções de qualidade.
+            </p>
+
+            <div class="dados-lista">
+              <div class="dado-item">
+                <span class="dado-label">Localização</span>
+                <span class="dado-valor">Brasília, DF — Brasil</span>
+              </div>
+              <div class="dado-item">
+                <span class="dado-label">E-mail</span>
+                <span class="dado-valor">catherine@email.com</span>
+              </div>
+              <div class="dado-item">
+                <span class="dado-label">LinkedIn</span>
+                <span class="dado-valor">linkedin.com/in/catherine</span>
+              </div>
+              <div class="dado-item">
+                <span class="dado-label">GitHub</span>
+                <span class="dado-valor">github.com/catherine</span>
+              </div>
+              <div class="dado-item">
+                <span class="dado-label">Idiomas</span>
+                <span class="dado-valor">Português · Inglês Avançado</span>
+              </div>
+              <div class="dado-item">
+                <span class="dado-label">Disponibilidade</span>
+                <span class="dado-valor">Estágio / CLT</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- FORMAÇÃO ACADÊMICA -->
+        <div class="curriculo-section">
+          <h2 style="font-size:1.1rem; color:var(--text-secondary); margin-bottom:28px; font-family:var(--font-display); letter-spacing:1px; text-transform:uppercase;">
+            Formação Acadêmica
+          </h2>
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <h3>Ensino Médio Completo</h3>
+              <p class="timeline-periodo">2020 — 2022 · Fundação Bradesco</p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Curso de Inglês</h3>
+              <p class="timeline-periodo">2019 — 2026 · Wizard Escola de Idiomas</p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Análise e Desenvolvimento de Sistemas - EaD</h3>
+              <p class="timeline-periodo">2023 — Em andamento · Gran Faculdade</p>
+              <p>Curso de nível superior tecnológico com foco em desenvolvimento de software, lógica de programação, banco de dados e engenharia de sistemas.</p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Curso técnico em Desenvolvimento de Sistemas</h3>
+              <p class="timeline-periodo">2026 — Em andamento · IFB Campus Brasília</p>
+              <p>Curso de nível técnico com foco em desenvolvimento de software, lógica de programação, banco de dados e engenharia de sistemas.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- EXPERIÊNCIA -->
+        <div class="curriculo-section">
+          <h2 style="font-size:1.1rem; color:var(--text-secondary); margin-bottom:28px; font-family:var(--font-display); letter-spacing:1px; text-transform:uppercase;">
+            Experiência
+          </h2>
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <h3>Assistente Administrativo — Gran Cursos Online</h3>
+              <p class="timeline-periodo">Maio/2021 — Abril/2026</p>
+              <p>Trabalhei como assistente administrativo, sendo responsável pelo envio (upload) de vídeos para uma plataforma de estudos, garantindo que o conteúdo fosse disponibilizado corretamente. Durante esse período, utilizei diferentes softwares para organização e controle das atividades, além de atualizar planilhas com informações relevantes. Também atuei no atendimento por e-mail, respondendo solicitações e auxiliando na comunicação com usuários e equipe.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- HABILIDADES TÉCNICAS -->
+        <div class="curriculo-section">
+          <h2 style="font-size:1.1rem; color:var(--text-secondary); margin-bottom:28px; font-family:var(--font-display); letter-spacing:1px; text-transform:uppercase;">
+            Habilidades Técnicas
+          </h2>
+          <div class="habilidades-grid">
+            <div class="habilidade-item">HTML5</div>
+            <div class="habilidade-item">CSS3</div>
+            <div class="habilidade-item">JavaScript</div>
+            <div class="habilidade-item">VS Code</div>
+            <div class="habilidade-item">Lógica de Programação</div>
+            <div class="habilidade-item">Pacote Office</div>
+            <div class="habilidade-item">Inglês Avançado</div>
+          </div>
+        </div>
+
+        <!-- HABILIDADES INTERPESSOAIS -->
+        <div class="curriculo-section">
+          <h2 style="font-size:1.1rem; color:var(--text-secondary); margin-bottom:28px; font-family:var(--font-display); letter-spacing:1px; text-transform:uppercase;">
+            Habilidades Interpessoais
+          </h2>
+          <div class="habilidades-grid">
+            <div class="habilidade-item">Trabalho em equipe</div>
+            <div class="habilidade-item">Comprometimento</div>
+            <div class="habilidade-item">Responsabilidade</div>
+            <div class="habilidade-item">Proatividade</div>
+            <div class="habilidade-item">Aprendizado contínuo</div>
+            <div class="habilidade-item">Organização</div>
+            <div class="habilidade-item">Foco em Resultados</div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <p>© <span class="ano-atual"></span> Catherine Ribeiro — Projeto Integrador TDSV1</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Troca de foto via clique
+    const inputFoto = document.getElementById('input-foto');
+    const previewFoto = document.getElementById('preview-foto');
+    const placeholderIcon = document.getElementById('placeholder-icon');
+
+    inputFoto.addEventListener('change', function () {
+      const file = this.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        previewFoto.src = e.target.result;
+        previewFoto.style.display = 'block';
+        placeholderIcon.style.display = 'none';
+      };
+      reader.readAsDataURL(file);
+    });
+  </script>
+</body>
+</html>
