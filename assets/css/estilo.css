@@ -5,12 +5,12 @@
 
 :root {
   --bg-primary: #121212;      /* fundo principal */
-  --bg-secondary: #dbd2c9;    /* seções */
+  --bg-secondary: #dbc2bd;    /* seções */
   --bg-card: #242424;         /* cards */
-  --accent: #f08fc7;
+  --accent: #ca4191;
   --accent-secondary: #ed70ed; /* rosa claro */
   --text-primary: #f8f8f8;
-  --text-secondary: #717070;
+  --text-secondary: #6a6969;
   --text-muted: #555;
   --border: #3a3a3a;
   --font-display: 'Space Mono', monospace;
@@ -221,7 +221,7 @@ nav a.ativo {
 }
 
 .btn-primary:hover {
-  background-color: #f73de1;
+  background-color: #f98fedd1;
   opacity: 1;
 }
 
@@ -232,7 +232,7 @@ nav a.ativo {
 }
 
 .btn-outline:hover {
-  background-color: #fd29e4;
+  background-color: #f2aeea16;
   opacity: 1;
 }
 
